@@ -8,9 +8,14 @@
 // - However, if Mary buys more than 40 apples, the price of each apple in the
 // entire order is reduced to only 1 rustbuck!
 
+use std::ops::Mul;
+
 // TODO: Write a function that calculates the price of an order of apples given
 // the quantity bought.
 // fn calculate_price_of_apples(???) -> ??? { ??? }
+fn calculate_price_of_apples(num: i32) -> i32 {
+    if num > 40 { num } else { num.mul(2) }
+}
 
 fn main() {
     // You can optionally experiment here.
